@@ -24,7 +24,7 @@ public class Amazon {
 		 ChromeOptions options = new ChromeOptions();
 		 options.addArguments("--disable-notifications");
 		 ChromeDriver driver = new ChromeDriver();
-	     driver.get("https://www.amazon.in/");
+	         driver.get("https://www.amazon.in/");
 		 driver.manage().window().maximize();
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		 Actions builder = new Actions(driver);
@@ -49,8 +49,8 @@ public class Amazon {
 		 File destination = new File("./images/OnePlus.png");
 		 FileUtils.copyFile(source, destination);
 		 WebElement tot = driver.findElement(By.xpath("//table[@class='a-lineitem a-align-top']//span[@aria-hidden='true']"));
-	     Thread.sleep(5000);
-	     String text2 = tot.getText();
+	         Thread.sleep(5000);
+	         String text2 = tot.getText();
 		 String rp1 = text2.replaceAll("[^0-9]", "");
 		 int t1 = Integer.parseInt(rp1);
 		 int k1 = t1/100;
